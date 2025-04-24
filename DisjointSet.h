@@ -1,9 +1,9 @@
 #ifndef DISJOINTSET_H
 #define DISJOINTSET_H
 #include <vector>
-
+using namespace std;
 class NaiveDisjointSet {
-    std::vector<int> parent;
+    vector<int> parent;
 public:
     NaiveDisjointSet(int n);
     int find(int x);
@@ -11,7 +11,7 @@ public:
 };
 
 class DisjointSet {
-    std::vector<int> parent, rank;
+    vector<int> parent, rank;
 public:
     DisjointSet(int n);
     int find(int x);

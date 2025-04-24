@@ -1,5 +1,5 @@
 #include "DisjointSet.h"
-
+using namespace std;
 NaiveDisjointSet::NaiveDisjointSet(int n) : parent(n) {
     for (int i = 0; i < n; ++i) parent[i] = i;
 }
