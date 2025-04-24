@@ -2,11 +2,8 @@
 #include <chrono>
 #include <cstdlib>
 #include "Dijkstra.h"
-#include "Dijkstra.cpp"
 #include "KMPTrie.h"
-#include "KMPTrie.cpp"
 #include "DisjointSet.h"
-#include "DisjointSet.cpp"
 using namespace std;
 int main() {
     while (true) {
