@@ -1,14 +1,14 @@
 #include "Dijkstra.h"
-
+using namespace std;
 NaiveGraph::NaiveGraph(int V) : V(V) { adj.resize(V); }
 void NaiveGraph::addEdge(int u, int v, int w) {
     adj[u].emplace_back(v, w);
     adj[v].emplace_back(u, w);
 }
-std::vector<int> NaiveGraph::dijkstra(int src) {
-    std::vector<int> dist(V, INT_MAX);
+vector<int> NaiveGraph::dijkstra(int src) {
+    vector<int> dist(V, INT_MAX);
     dist[src] = 0;
-    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<>> pq;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
     pq.push({0, src});
     while (!pq.empty()) {
         int d = pq.top().first;
@@ -31,10 +31,10 @@ void Graph::addEdge(int u, int v, int w) {
     adj[u].emplace_back(v, w);
     adj[v].emplace_back(u, w);
 }
-std::vector<int> Graph::dijkstra(int src) {
-    std::vector<int> dist(V, INT_MAX);
+vector<int> Graph::dijkstra(int src) {
+    vector<int> dist(V, INT_MAX);
     dist[src] = 0;
-    std::set<std::pair<int, int>> pq;
+    set<pair<int, int>> pq;
     pq.insert({0, src});
     while (!pq.empty()) {
         int u = pq.begin()->second;
