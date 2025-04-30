@@ -1,3 +1,5 @@
+// ===================== KMPTrie.h =====================
+
 #ifndef KMPTRIE_H
 #define KMPTRIE_H
 #include <unordered_map>
